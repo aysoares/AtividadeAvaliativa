@@ -1,0 +1,11 @@
+void main() {
+  int a = 50;
+  funcao(50);
+ 
+  }
+void funcao(int b) {
+    for (int i = 1; i<=b; i++) {
+      print(i);
+    }
+  }
+
