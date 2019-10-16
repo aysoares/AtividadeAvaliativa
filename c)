@@ -1,6 +1,6 @@
 void main() {
   int a = 50;
-  funcao(50);
+  funcao(a);
  
   }
 void funcao(int b) {
