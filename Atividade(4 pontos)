@@ -1,0 +1,45 @@
+void main() {
+ Banco b = new Banco(123,'Física','Aylla',1000);
+ b.criarconta();
+ b.deposito(100);
+ b.saque(200);
+ b.transferencia(123, 132, 300);
+ double valorsaldo = b.saldof();
+ print('Saldo atual: $valorsaldo');
+  
+}
+class Banco {
+  
+  int nconta;
+  String tipo;
+  String nome;
+  double saldo;
+  
+  Banco(this.nconta,this.tipo, this.nome, this.saldo);
+  
+   void criarconta () {
+     print ('Nome do usuário da conta: $nome');
+     print ('Tipo da conta: $tipo');
+     print ('Número da conta $nconta');
+   }
+  
+  void deposito (double valor) {
+    print('Depósito valor: $valor');
+    saldo = saldo + valor;
+    print('Saldo da conta: $saldo');
+  }
+  
+  void saque (double valorsaq) {
+    print ('Saque de: $valorsaq');
+    saldo = saldo - valorsaq;
+    print('Saldo da conta: $saldo');
+    
+  }
+  
+  void transferencia (int x, int z, double y) {
+    print ('Conta $x transfere $y para a conta $z');
+    saldo = saldo - y;
+  }
+  
+  double saldof () => this.saldo;
+}
